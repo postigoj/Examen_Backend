@@ -92,9 +92,7 @@ namespace Api.Test.Repository
             }
             catch (Exception ex)
             {
-                // Handle specific exceptions or log the error
-                // You can customize the exception handling based on your requirements
-                throw new ApplicationException("Failed to add cliente.", ex);
+                throw new ApplicationException("Fallo en agregar cliente", ex);
             }
         }
 
