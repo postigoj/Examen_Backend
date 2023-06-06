@@ -38,10 +38,16 @@ namespace Api.Test.Repository
 
         public async Task<bool> CheckUser(string usuario)
         {
-            var userExist = await _dbContext.UsuarioAccesos.AnyAsync(u => usuario == u.Usuario);
+            try
+            {
+                var userExist = await _dbContext.UsuarioAccesos.AnyAsync(u => usuario == u.Usuario);
 
-            return userExist;
-
+                return userExist;
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("fallo al chequear usuario", ex);
+            }
         }
 
     }
