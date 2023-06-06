@@ -14,6 +14,6 @@ Este proyecto consite en desarrolllar una api restFull que integra Swagger para 
 #1 .net 6<br>
 #2 EntityFrameworkCore 7.0.5 <br>
 #3 EntityFrameworkCore.SqlServer 7.0.5 <br>
-#4 EntityFrameworkCore.Tools 7.0.5
-#5 EntityFrameworkCore.Design 7.0.5
+#4 EntityFrameworkCore.Tools 7.0.5 <br>
+#5 EntityFrameworkCore.Design 7.0.5 <br>
 #6 Authentication.JwtBearer 6.0.0 
