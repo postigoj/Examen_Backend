@@ -6,7 +6,7 @@ namespace Api.Test.Repository
 {
     public class ClienteRepository : IClientes
     {
-        readonly DataBaseContext _dbContext = new();
+         readonly DataBaseContext _dbContext = new();
 
         public ClienteRepository(DataBaseContext dbContext)
         {
