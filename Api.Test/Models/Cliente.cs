@@ -32,17 +32,6 @@ public partial class Cliente
 
     //validations
 
-    public IEnumerable<ValidationResult> GetValidationResults()
-    {
-        var validationContext = new ValidationContext(this, serviceProvider: null, items: null);
-        var validationResults = new List<ValidationResult>();
-
-        Validator.TryValidateObject(this, validationContext, validationResults, validateAllProperties: true);
-
-        return validationResults;
-    }
-
-
 
     public bool IsValidCuit()
     {
