@@ -7,6 +7,7 @@ using static Api.Test.Repository.ClienteRepository;
 
 namespace Api.Test.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ClienteController : ControllerBase
@@ -76,12 +77,6 @@ namespace Api.Test.Controllers
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-            }
-
-            var validationResults = cliente.GetValidationResults();
-            if (validationResults.Any())
-            {
-                return BadRequest(validationResults);
             }
 
             if (!cliente.IsValidCuit())
