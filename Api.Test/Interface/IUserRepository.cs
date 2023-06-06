@@ -6,6 +6,7 @@ namespace Api.Test.Interface
     {
         Task<UsuarioAcceso> GetUser(string username, string password);
         Task AddUserAsync(UsuarioAcceso user);
+        Task<bool> CheckUser(string usuario);
 
     }
 

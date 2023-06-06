@@ -18,6 +18,9 @@ namespace Api.Test.Repository
             {
                 try
                 {
+                   var userExist = await _dbContext.UsuarioAccesos.AnyAsync(u => u.Usuario == user.Usuario);
+
+              
                     _dbContext.UsuarioAccesos.Add(user);
                     await _dbContext.SaveChangesAsync();
                 }
@@ -32,5 +35,14 @@ namespace Api.Test.Repository
         {
             return await _dbContext.UsuarioAccesos.FirstOrDefaultAsync(u => u.Usuario == usuario && u.Password == password );
         }
+
+        public async Task<bool> CheckUser(string usuario)
+        {
+            var userExist = await _dbContext.UsuarioAccesos.AnyAsync(u => usuario == u.Usuario);
+
+            return userExist;
+
+        }
+
     }
 }
