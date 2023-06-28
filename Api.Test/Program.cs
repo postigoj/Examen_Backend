@@ -33,8 +33,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<ClienteService>();
-builder.Services.AddTransient<IUserRepository, UserRepository>();
-builder.Services.AddTransient<IClientes, ClienteRepository>();
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<ClienteRepository>();
 builder.Services.AddControllers();
